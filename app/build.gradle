@@ -18,7 +18,6 @@ android {
             storePassword ${PASS}
             keyAlias "prueba"
             keyPassword "password"
-            println("PROBANDOOOOO!!!!!")
         }
     }
 
@@ -26,6 +25,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            println("PROBANDOOOOO!!!!!")
             signingConfig signingConfigs.release
         }
     }

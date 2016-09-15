@@ -15,9 +15,10 @@ android {
     signingConfigs {
         release {
             storeFile file("../keystore.jks")
-            storePassword "password"
+            storePassword ${PASS}
             keyAlias "prueba"
             keyPassword "password"
+            println("PROBANDOOOOO!!!!!")
         }
     }
 

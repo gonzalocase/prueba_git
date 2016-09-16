@@ -20,7 +20,7 @@ android {
 //            ext.env = System.getenv()
 
             storeFile file("../keystore.jks")
-            storePassword "password"
+            storePassword custom
             keyAlias "prueba"
             keyPassword "password"
             println(custom)

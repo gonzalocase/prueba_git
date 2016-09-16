@@ -1,3 +1,5 @@
+import java.sql.DriverManager
+
 apply plugin: 'com.android.application'
 
 android {
@@ -14,10 +16,14 @@ android {
 
     signingConfigs {
         release {
+//            Map<String, String> ext = new HashMap<String, String>()
+//            ext.env = System.getenv()
+
             storeFile file("../keystore.jks")
             storePassword "password"
             keyAlias "prueba"
             keyPassword "password"
+            println(custom)
         }
     }
 

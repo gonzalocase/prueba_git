@@ -24,7 +24,7 @@ android {
         release {
 //            Map<String, String> ext = new HashMap<String, String>()
 //            ext.env = System.getenv()
-            storeFile file("../../keystore_prueba_git.jks")
+            storeFile file("../../keys/keystore_prueba_git.jks")
             storePassword storePasswordParam
             keyAlias keyAliasParam
             keyPassword keyPasswordParam

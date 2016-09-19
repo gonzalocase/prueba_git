@@ -1,5 +1,3 @@
-import java.sql.DriverManager
-
 apply plugin: 'com.android.application'
 
 android {
@@ -14,11 +12,19 @@ android {
         versionName "1.0"
     }
 
+//Probar tarea javadoc
+//    task javadoc(type: Javadoc) {
+//        source = android.sourceSets.main.java.srcDirs
+//        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//        destinationDir = file("../javadoc/")
+//        failOnError false
+//    }
+
     signingConfigs {
         release {
 //            Map<String, String> ext = new HashMap<String, String>()
 //            ext.env = System.getenv()
-            storeFile file("../keystore.jks")
+            storeFile file("../../keystore_prueba_git.jks")
             storePassword storePasswordParam
             keyAlias keyAliasParam
             keyPassword keyPasswordParam

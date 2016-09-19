@@ -6,10 +6,14 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.3'
-
+        classpath 'co.riiid:gradle-github-plugin:0.4.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+}
+
+plugins {
+    id "co.riiid.gradle" version "0.4.2"
 }
 
 allprojects {

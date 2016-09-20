@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -10,11 +11,34 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        setProperty("archivesBaseName", "PruebaGit-$versionName")
     }
+
+//Probar tarea javadoc
+//    task javadoc(type: Javadoc) {
+//        source = android.sourceSets.main.java.srcDirs
+//        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//        destinationDir = file("../javadoc/")
+//        failOnError false
+//    }
+
+    signingConfigs {
+        release {
+//            Map<String, String> ext = new HashMap<String, String>()
+//            ext.env = System.getenv()
+            storeFile file("../../keys/keystore_prueba_git.jks")
+            storePassword storePasswordParam
+            keyAlias keyAliasParam
+            keyPassword keyPasswordParam
+            println("DESDE el gradle!!! " + storePasswordParam + " " + keyAliasParam + " " + keyPasswordParam + " " + pathKeyStore)
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }

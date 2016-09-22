@@ -30,7 +30,6 @@ android {
             storePassword storePasswordParam
             keyAlias keyAliasParam
             keyPassword keyPasswordParam
-            println("DESDE el gradle!!! " + storePasswordParam + " " + keyAliasParam + " " + keyPasswordParam + " " + pathKeyStore)
         }
     }
 

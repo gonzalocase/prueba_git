@@ -22,22 +22,22 @@ android {
 //        failOnError false
 //    }
 
-    signingConfigs {
-        release {
-//            Map<String, String> ext = new HashMap<String, String>()
-//            ext.env = System.getenv()
-            storeFile file("../../keys/keystore_prueba_git.jks")
-            storePassword storePasswordParam
-            keyAlias keyAliasParam
-            keyPassword keyPasswordParam
-        }
-    }
+//    signingConfigs {
+//        release {
+////            Map<String, String> ext = new HashMap<String, String>()
+////            ext.env = System.getenv()
+//            storeFile file("../../keys/keystore_prueba_git.jks")
+//            storePassword storePasswordParam
+//            keyAlias keyAliasParam
+//            keyPassword keyPasswordParam
+//        }
+//    }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
         }
     }
 }

@@ -16,7 +16,7 @@ node {
 
     //build your gradle flavor, passes the current build number as a parameter to gradle
     //sh "./gradlew clean assemble${env.BRANCH_NAME}Debug -PBUILD_NUMBER=${env.BUILD_NUMBER}"
-    sh "./chmod +x /var/lib/jenkins/workspace/prueba_git/gradlew"
+    sh "chmod +x /var/lib/jenkins/workspace/prueba_git/gradlew"
     sh "./gradlew assembleRelease"
 
     stage 'Stage Archive'

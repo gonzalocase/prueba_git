@@ -17,12 +17,18 @@ node {
     //build your gradle flavor, passes the current build number as a parameter to gradle
     //sh "./gradlew clean assemble${env.BRANCH_NAME}Debug -PBUILD_NUMBER=${env.BUILD_NUMBER}"
     sh "chmod +x /var/lib/jenkins/workspace/Agent_Libreria_Pipeline/develop/gradlew"
-    sh "./gradlew assemble"
+    sh "./gradlew assemble -Pprueba=asd"
 
     stage 'Stage Archive'
     //tell Jenkins to archive the apks
     step([$class: 'ArtifactArchiver', artifacts: 'app/build/outputs/apk/*.apk', fingerprint: true])
 
-    //stage 'Stage Upload To Fabric'
+    //stage 'Stage Upload To Github release'
+    sh '''
+
+    '''
+
+
+
     //sh "./gradlew crashlyticsUploadDistribution${env.BRANCH_NAME}Debug  -PBUILD_NUMBER=${env.BUILD_NUMBER}"
 }

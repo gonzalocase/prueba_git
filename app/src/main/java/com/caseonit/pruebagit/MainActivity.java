@@ -3,6 +3,9 @@ package com.caseonit.pruebagit;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.caseonit.library.Asd;
+
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -20,5 +23,7 @@ public class MainActivity extends AppCompatActivity {
         //feature_02
         //feature_a
         //feature_b
+        Asd asD= new Asd();
+        asD.setAsd("asd");
     }
 }

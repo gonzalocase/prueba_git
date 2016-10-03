@@ -1,8 +1,23 @@
+import org.gradle.authentication.http.BasicAuthentication
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
     repositories {
         jcenter()
+//        maven {
+//            url "https://github.com/gonzalocase/prueba_mvn/raw/master/"
+//        }
+//        maven {
+//            url "https://github.com/gonzalocase/prueba_mvn/raw/master/"
+//        }
+//        maven {
+//            url = 'https://github.com/abatiz/agent-library.git'
+//            credentials {
+//                username 'gonzalocase'
+//                password githubPass
+//            }
+//        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.1.3'
@@ -15,6 +30,18 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven {
+//            credentials {
+//                username 'gonzalocase'
+//                password githubPass
+//            }
+//            url "https://github.com/abatiz/gonzMaven/raw/master/"
+            url "https://github.com/gonzalocase/prueba_mvn/raw/master/"
+//            authentication {
+//                basic(BasicAuthentication)
+//            }
+        }
+
     }
 }
 
